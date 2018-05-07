@@ -9,8 +9,13 @@
 <body>
 <h1>Testing!</h1>
 <script>
-var dataArray = getDataFromExcel();
-console.log(dataArray);
+  var dataArray;
+var callback=  new function(data)
+  {
+    dataArray=data;
+    console.log(dataArray);
+  }
+getDataFromExcel(callback);
 
 </script>
 </body>

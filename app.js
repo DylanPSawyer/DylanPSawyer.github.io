@@ -1,8 +1,8 @@
 
 
-function getDataFromExcel()
+function getDataFromExcel(callback)
 {
-    /* set up XMLHttpRequest */
+    /* set up XMLHttpRequesst */
 var url = "TsaClaimsData.xls";
 var oReq = new XMLHttpRequest();
 oReq.open("GET", url, true);
@@ -24,8 +24,7 @@ oReq.onload = function(e) {
   var first_sheet_name = workbook.SheetNames[0];
   /* Get worksheet */
   var worksheet = workbook.Sheets[first_sheet_name];
-  return XLSX.utils.sheet_to_json(worksheet,{raw:false});
-
+  callback(XLSX.utils.sheet_to_json(worksheet,{raw:false}));
 }
 
 oReq.send();
