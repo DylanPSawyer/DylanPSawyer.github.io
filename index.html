@@ -1,22 +1,58 @@
-]<!doctype html>
+<!Doctype html>
 <html>
 <head>
 <title>Excel to JSON Demo</title>
 
 <script src="xlsx.full.min.js"></script>
 <script src="app.js"></script>
+
 </head>
 <body>
 <h1>Testing!</h1>
+<p id="ProgressUpdate"></p>
+<progress id="ProgressBar" value="0" max="100"></progress>
 <script>
  var dataArray;
- function callback(data)
+ function callBackData(data)
   {
     dataArray=data;
+    
     console.log(dataArray);
+
+    callBackProgress(100);
   }
+ function callBackProgress(progress)
+ {
+   var ProgressText= document.getElementById("ProgressUpdate");
+   var ProgressBar = document.getElementById("ProgressBar");
+
+   switch(progress)
+   {
+     case 25:
+          ProgressText.innerHTML="In Onload"
+          ProgressBar.value= "25"
+          break;
+     case 50:
+          ProgressText.innerHTML="Made it through for loop"
+          ProgressBar.value= "50"
+          break;
+     case 75:
+          ProgressText.innerHTML="Converted workbook"
+          ProgressBar.value= "75"
+          break;
+     case 100:
+          ProgressText.innerHTML="Done!!"
+          ProgressBar.value="100"
+          break;
+   }
+   
+ }
+
+
+
  getDataFromExcel(callback);
+ 
 </script>
 </body>
 </html>
-
+S
