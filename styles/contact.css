@@ -1,0 +1,14 @@
+
+div#grid-wrapper{
+    padding: 0 30%;
+}
+
+div#grid-wrapper div.item{
+    border-color: pink;
+    width: 200px;
+    gap: 25px;
+}
+
+form div{
+    padding: 20px 0;
+}

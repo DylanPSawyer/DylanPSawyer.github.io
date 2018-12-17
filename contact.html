@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<link rel='icon' href="images/hot-article.png" >
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/contact.css">
+
+<meta charset="UTF-8">
+<meta name="description" content="Contact form">
+<meta name="author" content="Dylan Sawyer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+
+<body>
+    <h1>Contact Info</h1>
+    <div id="grid-wrapper">
+    <div class="item">Phone:<a class="phone-number" href="tel:6033400242">(603)340-0242</a></div>
+    <div class="item">Email:<br/><a href="mailto:d.psawyer@yahoo.com">d.psawyer@yahoo.com</a></div>
+    <div class="item">Address: 932A Borough Rd. Pembroke NH 03275</div>
+    <div class="item">Linkedin:<a href="/">A very real link to my linkedin</a></div>
+    </div>
+
+
+    <h2 id="contact-header">Contact</h2>
+    <form id="form">
+        <div>
+            <label for="name">Full Name<span>*</span></label>
+            <input required id="name" type="text">
+        </div>
+        <div>
+            <label for="company">Company</label>
+            <input id="company" type="text">
+        </div>
+        <div>
+            <label  for="email">Email<span>*</span></label>
+            <input required id="email" type="email">
+        </div>
+        <div>
+            <label for="phone">Phone </label>
+            <input id="phone " type="tel">
+        </div>
+        <input type="submit">
+    </form>
+
+    <script>
+        var url = window.location.href;
+        if(url.charAt(url.length -1) == '?'){
+            document.getElementById('form').style='display:none;'
+            document.getElementById('contact-header').innerHTML ="Thank you for submitting";
+        }
+
+    </script>
+
+    <footer>
+            <a href="index.html">About Me</a>
+            <a href="contact.html">Contact</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="skills.html">Skills</a>
+    </footer>
+    
+
+</body>
+
+</html>

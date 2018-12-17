@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    background-color: gray
+}
+
+
+
+
+div#grid-wrapper{
+    display: grid;
+    padding: 0 33.5%;
+    grid-template-columns: 75px 75px;
+    grid-gap: 35px 200px;
+
+}
+
+div#grid-wrapper div.item{
+    padding: 20px;
+    width: 110px;
+    border: double red 10px;
+    border-radius: 5px;
+    font-size: 150%;
+}
+
+footer{
+    display: block;
+    width: 100%;
+    margin-top: 5%
+}
+

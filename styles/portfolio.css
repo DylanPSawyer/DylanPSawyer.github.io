@@ -1,0 +1,11 @@
+
+div#grid-wrapper{
+    padding: 0 29%;
+}
+
+div#grid-wrapper div.item{
+    padding: 15px;
+    border-color: green;
+    width: 220px;
+    gap: 25px;
+}
